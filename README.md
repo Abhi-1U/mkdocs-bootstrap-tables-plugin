@@ -8,12 +8,15 @@ Install the plugin using pip:
 
 `pip install mkdocs-bootstrap-tables-plugin`
 
-Activate the plugin in `mkdocs.yml`:
+Activate the plugin in `mkdocs.yml` and add optional theme config value:
 ```yaml
 plugins:
   - search
-  - bootstrap-tables
+  - bootstrap-tables:
+      - bootstrap-theme: table-striped
 ```
+> **custom_theme:** One needs to add bootstrap CDN link to meta under the custom\_theme option if the theme doesn't support bootstrap natively. 
+
 
 > **Note:** If you have no `plugins` entry in your config file yet, you'll likely also want to add the `search` plugin. MkDocs enables it by default if there is no `plugins` entry set, but now you have to enable it explicitly.
 
